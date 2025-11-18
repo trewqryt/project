@@ -1,0 +1,132 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Britannic Bold", sans-serif;
+    background: #f8f9fa;        /* очень светлый серый, почти белый */
+    color: #212529;             /* тёмный текст для читаемости */
+}
+
+.btn {
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 2px solid var(--orange);
+    background: white;
+    color: var(--orange);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    background: var(--orange);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(255, 140, 0, 0.4);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1, h2, h3, h4 {
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+}
+
+h1 {
+    font-size: 70px;
+    color: #212529;
+    margin: 40px auto;
+}
+
+h2, h3 {
+    font-size: 30px;
+    color: #495057;
+}
+
+h4 {
+    font-size: 24px;
+    color: #212529;
+}
+
+strong {
+    color: var(--orange);
+}
+
+label {
+    font-size: 24px;
+    color: var(--orange);
+}
+
+input {
+    width: 350px;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 15px;
+    color: #212529;
+    background: white;
+    border: 2px solid var(--orange);
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--orange);
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.2);
+}
+
+.checker {
+    color: #212529;
+    font-size: 30px;
+}
+
+.btn-slide {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: var(--orange);
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 50%;
+    font-weight: 800;
+    z-index: 1;
+    border: none;
+    box-shadow: 0 6px 15px rgba(255, 140, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-slide:hover {
+    background: #e67e22;
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(255, 140, 0, 0.4);
+}
+
+/* Цвет акцента */
+:root {
+    --orange: #ff8c00;   /* тёплый оранжевый, как был изначально */
+}

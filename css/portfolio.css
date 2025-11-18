@@ -1,0 +1,221 @@
+/* ====================== PROFILE SECTION ====================== */
+.profile_section {
+    padding: 140px 0 60px;
+    background: #f8f9fa;
+}
+
+.profile_card {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    border: 3px solid var(--orange);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+}
+
+.profile_left {
+    flex: 1;
+    text-align: center;
+}
+
+.profile_avatar {
+    width: 200px;       /* ширина */
+    height: 200px;      /* высота */
+    border-radius: 8px; /* небольшое закругление углов (можно 0 для прямых углов) */
+    border: 4px solid var(--orange);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    object-fit: cover;  /* чтобы изображение не искажалось и заполняло квадрат */
+}
+
+
+.profile_btn {
+    margin-top: 20px;
+}
+
+/* Профиль справа */
+.profile_right {
+    flex: 2;
+}
+
+.profile_right h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.profile_text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.profile_skills {
+    list-style: none;
+    padding-left: 0;
+}
+
+.profile_skills li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--orange);
+}
+
+/* ====================== PORTFOLIO SECTION ====================== */
+.portfolio_section h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.portfolio_section h1 strong {
+    color: var(--orange);
+}
+
+.portfolio_section h2 {
+    font-size: 24px;
+    text-align: center;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+/* Сетка карточек */
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    gap: 30px;
+    justify-items: center; /* центрируем карточки */
+}
+
+.work-card {
+    background: white;
+    border: 2px solid var(--orange);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.work-card-img {
+    width: 100%;
+    height: 180px;           /* фиксированная высота для всех изображений */
+    overflow: hidden;         /* обрезаем лишнее */
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.work-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* картинка полностью заполняет контейнер */
+    display: block;
+}
+
+
+.work-card h4 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.work-card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Hover эффект */
+.work-card:hover {
+    transform: translateY(-10px);
+    background: var(--orange);
+    color: white;
+    box-shadow: 0 20px 50px rgba(255,140,0,0.3);
+}
+
+.work-card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.work-card:hover p {
+    color: #fff;
+}
+
+/* Финальная кнопка */
+.final-btn-wrapper {
+    text-align: center;
+    margin: 60px 0 40px;
+}
+
+.final-btn {
+    width: 400px;
+    max-width: 90%;
+    height: 70px;
+    background: var(--orange);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-size: 28px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 12px 35px rgba(255,140,0,0.35);
+    transition: all 0.3s ease;
+}
+
+.final-btn:hover {
+    background: #e67e22;
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(255,140,0,0.45);
+}
+
+/* Контакты */
+.contacts_section {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.contacts_section h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+.contacts_section .profile_text {
+    font-size: 18px;
+}
+
+/* ====================== Адаптив ====================== */
+@media (max-width: 992px) {
+    .profile_card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile_right {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .works-grid {
+        grid-template-columns: 1fr; /* 1 колонка на узких экранах */
+    }
+} 
+@media (max-width: 576px) {
+    .work-card h4 {
+        font-size: 18px;
+    }
+
+    .work-card p {
+        font-size: 14px;
+    }
+
+    .final-btn {
+        font-size: 20px;
+        height: 60px;
+    }
+}
